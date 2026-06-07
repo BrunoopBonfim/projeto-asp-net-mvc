@@ -1,6 +1,30 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+    ViewData["Title"] = "Contador Interativo";
+    
+    int valorContador = ViewBag.Contador ?? 0;
 
-<p>Use this page to detail your site's privacy policy.</p>
+    string classeCor = "text-dark"; 
+    if (valorContador > 0) {
+        classeCor = "text-success"; 
+    } else if (valorContador < 0) {
+        classeCor = "text-danger"; 
+    }
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Contador Interativo</h1>
+    
+    <h1 id="numero" class="display-1 fw-bold @classeCor" style="font-size: 6rem;">
+        @valorContador
+    </h1>
+
+    <form method="post" action="/Home/Contar">
+        <input type="hidden" name="valorAtual" value="@valorContador" />
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <button type="submit" name="acao" value="diminuir" class="btn btn-danger btn-lg">diminuir</button>
+            <button type="submit" name="acao" value="zerar" class="btn btn-secondary btn-lg">Zerar</button>
+            <button type="submit" name="acao" value="aumentar" class="btn btn-success btn-lg">aumentar</button>
+        </div>
+    </form>
+</div>

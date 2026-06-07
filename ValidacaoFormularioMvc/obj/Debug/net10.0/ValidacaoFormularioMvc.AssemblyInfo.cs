@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ValidacaoFormularioMvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfac3df5b5fddb4b399454171f47b387337407db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a99d30eaf1ffc3f93699c02846d07114ea142742")]
 [assembly: System.Reflection.AssemblyProductAttribute("ValidacaoFormularioMvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ValidacaoFormularioMvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
