@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Validação de Formulário";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Validação Interativa (ASP.NET MVC)</h1>
+    <p>Preencha os dados abaixo:</p>
+</div>
+
+@if (ViewBag.Erro != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Erro
+    </div>
+}
+
+@if (ViewBag.Sucesso != null)
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.Sucesso
+    </div>
+}
+
+<form method="post" action="/Home/Validar">
+    <div class="form-group mb-3">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
